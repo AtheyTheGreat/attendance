@@ -1,0 +1,25 @@
+{
+    "name": "bagwaa/killswitch",
+    "description": "Remotely disable a Laravel 5 application",
+    "keywords": ["framework", "laravel", "killswitch", "kill", "switch"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Richard Bagshaw",
+            "email": "me@richardbagshaw.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "KillSwitch\\": "src/"
+        }
+    },
+
+    "require": {
+        "GuzzleHttp/Guzzle": "^6.1"
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    }
+}
