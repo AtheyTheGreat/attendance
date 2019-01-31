@@ -62,11 +62,11 @@
 								$lastLog  = ($record->first_log == $record->last_log) ? '' : $record->last_log;
 
 								if (date('w', strtotime($date)) < 6) {
-									$lateness = (strtotime($record->first_log) > strtotime('09:00:00')) ? 'Late' : 'Excellent';
-									$lateness = (strtotime($record->first_log) > strtotime('10:00:00')) ? 'Very Late' : $lateness;
+									$lateness = (strtotime($record->first_log) > strtotime('08:00:00')) ? 'Late' : 'Excellent';
+									$lateness = (strtotime($record->first_log) > strtotime('09:00:00')) ? 'Very Late' : $lateness;
 								} else {
-									$lateness = (strtotime($record->first_log) > strtotime('10:00:00')) ? 'Late' : 'Excellent';
-									$lateness = (strtotime($record->first_log) > strtotime('11:00:00')) ? 'Very Late' : $lateness;
+									$lateness = (strtotime($record->first_log) > strtotime('08:00:00')) ? 'Late' : 'Excellent';
+									$lateness = (strtotime($record->first_log) > strtotime('09:00:00')) ? 'Very Late' : $lateness;
 								}
 								$class =  ($lateness == 'Excellent') ? 'success' : (($lateness == 'Late') ? 'warning' : 'danger');
 								$time = $times[$record->user_id][$date];
